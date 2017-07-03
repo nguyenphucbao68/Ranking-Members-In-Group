@@ -32,6 +32,9 @@ Func _XulyRank()
 		ConsoleWrite($tam)
 		_ArrayAdd($ArrayRanking, $tam)
 	Next
+	For $i = 0 to UBound($ArrayRanking, 1) - 1
+ 		$ArrayRanking[$i][2] = number($ArrayRanking[$i][2]) ; Chuyển điểm thành dạng số đếm
+	Next
 	_ArrayDisplay($ArrayRanking)
 ;~ 	_ArraySort($ArrayRanking,1,0,0,2)
 ;~ 	_ArrayDisplay($ArrayRanking)
